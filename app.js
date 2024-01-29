@@ -1,14 +1,7 @@
-/*let parrafo = document.querySelector('p');
-parrafo.innerHTML = 'Indica un número del 1 al 10.';
-*/
-
 let numeroMaximo = 10;
 let listaNumerosSorteados = [];
 let numeroSecreto = generarNumeroSecreto();
 let intentos = 1;
-
-
-
 
 function asignarTextoElemento(elemento, texto){
     let elementoHTML = document.querySelector(elemento);
@@ -17,7 +10,6 @@ function asignarTextoElemento(elemento, texto){
 }
 
 function verificarIntento() {
-    //alert('click desde la función del botón');
     let numeroDeUsuario = parseInt(document.getElementById('valorUsuario').value);
     console.log('numero de intentos = '+intentos);
     
@@ -32,7 +24,6 @@ function verificarIntento() {
         if(numeroDeUsuario<numeroSecreto)
         asignarTextoElemento('p','El numero es mayor');
     }
-
     intentos++; 
     limpiarCaja();
     }   
@@ -40,8 +31,6 @@ function verificarIntento() {
 }
 
 function limpiarCaja (){
-    //let valorCaja =document.querySelector('#valorUsuario');
-    //valorCaja.value = '';
     document.querySelector('#valorUsuario').value = '';
 }
 
@@ -63,9 +52,6 @@ function generarNumeroSecreto() {
         return numeroGenerado;
         }
     }
-    //return Math.floor(Math.random()*10)+1;
-    /*let numeroSecreto = Math.floor(Math.random()*10)+1;
-    return numeroSecreto;*/
 }
 
 function condicionesIniciales(){
@@ -73,7 +59,6 @@ function condicionesIniciales(){
     asignarTextoElemento('p', `Indica un número del 1 al ${numeroMaximo}`);
     numeroSecreto = generarNumeroSecreto();
     intentos = 1;
-
 }
 
 function reiniciarJuego(){
